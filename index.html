@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ToDo.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Список задач</title>
+</head>
+
+<body>
+
+    <div class="app">
+
+        <div class="container">
+            <header>
+                <span>Текущие задачи</span>
+            </header>
+
+            <main>
+                <ul id="taskListBlock">
+                </ul>
+                <button class="add-btn">
+                    <span>+</span>
+                </button>
+            </main>
+
+
+            <footer>
+                <span id="completedTaskTitle">Завершено</span>
+                <button class="delete-all">Удалить всё</button>
+    
+                <ul id="completedTaskBlock">
+                </ul>
+            </footer>
+
+
+        </div>
+
+        <!-- Modal -->
+
+        <div class="backdrop display-none">
+            <div class="modal">
+                <div class="modal-container">
+                    <h2 class="modal-title">Добавление задачи</h2>
+                    <div class="error-message display-none"></div>
+                    <form class="modal-form">
+                        <label for="taskFormTextarea">Текст задачи</label>
+                        <textarea id="taskFormTextarea"></textarea>
+                        <div class="modal-controls">
+                            <button class="confirm-btn">Добавить</button>
+                            <button class="close-btn">Отменить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal end -->
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
